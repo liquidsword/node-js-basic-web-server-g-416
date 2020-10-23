@@ -8,7 +8,8 @@ const router = new Router();
 
 router.get('/', (request, response) => {
   // A good place to start!
-  response.end();
+  response.setHeader('Content-Type', 'text/plain; charset=utf-8')
+  response.end('Hello, World!');
 });
 
 const server = http.createServer((request, response) => {
